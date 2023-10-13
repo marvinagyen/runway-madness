@@ -16,6 +16,10 @@ public class clickToMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(PauseMenuScript.GameIsPaused)
+        {
+            target = null;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 raycastposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
