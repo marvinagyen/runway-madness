@@ -14,29 +14,31 @@ public class clickToMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && target == null)
         {
             Vector2 raycastposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(raycastposition, Vector2.zero);
             
             if (hit.collider != null)
             {
-                if (hit.collider.gameObject.tag == "Player")
+                if (hit.collider.gameObject.tag == "Plane")
                 {
                     target = hit.collider.gameObject;
                 }
             }
         }
-        if (Input.GetMouseButtonDown(0))
+        else if (Input.GetMouseButtonDown(0))
         {
             moveToPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moveToPosition.z = transform.position.z;
         }
         if (target != null)
         {
-            target.transform.position = Vector3.MoveTowards(target.transform.position, moveToPosition, speed * Time.deltaTime);
+            target.transform.GetComponent<Plane>().MovePlane(moveToPosition);
+            target = null;
+            //target.transform.position = Vector3.MoveTowards(target.transform.position, moveToPosition, speed * Time.deltaTime);
         }
     }
 }
