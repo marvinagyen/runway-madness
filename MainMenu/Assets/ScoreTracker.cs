@@ -3,22 +3,22 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreTracker : MonoBehaviour {
+// public class ScoreTracker : MonoBehaviour {
 
-      public GameObject scoreText;
-      private int playerScore = 0;
+//       public GameObject scoreText;
+//       private int playerScore = 0;
 
-      void Start(){
-            UpdateScore();
-      }
+//       void Start(){
+//             UpdateScore();
+//       }
 
-      public void AddScore(int points){
-            playerScore += points;
-            UpdateScore();
-      }
+//       public void AddScore(int points){
+//             playerScore += points;
+//             UpdateScore();
+//       }
 
-      void UpdateScore(){
-            Text scoreTextB = scoreText.GetComponent<Text>();
-            scoreTextB.text = "SCORE: " + playerScore;
-      }
-}
+//       void UpdateScore(){
+//             Text scoreTextB = scoreText.GetComponent<Text>();
+//             scoreTextB.text = "SCORE: " + playerScore;
+//       }
+// }
