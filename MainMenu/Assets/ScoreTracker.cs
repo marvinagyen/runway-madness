@@ -1,24 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ScoreTracker : MonoBehaviour
-{
-    // Start is called before the first frame update
-    public GameObject scoreText;
-    private int playerScore = 0;
+public class ScoreTracker : MonoBehaviour {
 
-    void Start(){
-          UpdateScore();
-    }
+      public GameObject scoreText;
+      private int playerScore = 0;
 
-    public void AddScore(int points){
-          playerScore += points;
-          UpdateScore();
-    }
+      void Start(){
+            UpdateScore();
+      }
 
-    void UpdateScore(){
-          Text scoreTextB = scoreText.GetComponent<Text>();
-          scoreTextB.text = "" + playerScore;
-    }
+      public void AddScore(int points){
+            playerScore += points;
+            UpdateScore();
+      }
+
+      void UpdateScore(){
+            Text scoreTextB = scoreText.GetComponent<Text>();
+            scoreTextB.text = "SCORE: " + playerScore;
+      }
 }
