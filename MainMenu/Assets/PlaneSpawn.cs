@@ -16,8 +16,8 @@ public class PlaneSpawn : MonoBehaviour
   {
     planeTimer -= Time.deltaTime;
     if (planeTimer <= 0f){
-
-        planeTimer = Random.Range(5,45);
+        int score = (ScoreTracker.playerScore <= 0 ? 1 : ScoreTracker.playerScore);
+        planeTimer = 20/score;
 
         color = Random.Range(0,3);
         random = Random.Range(0,3);

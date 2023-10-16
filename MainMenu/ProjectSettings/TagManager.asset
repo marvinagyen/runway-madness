@@ -8,6 +8,7 @@ TagManager:
   - garage
   - terminal
   - fuelPump
+  - gamehandler
   layers:
   - Default
   - TransparentFX
