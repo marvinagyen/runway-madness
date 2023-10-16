@@ -10,18 +10,19 @@ public class clickToMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveToPosition = transform.position;
+        // moveToPosition = transform.position;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if(PauseMenuScript.GameIsPaused)
-        {
-            target = null;
-        }
+        // if(PauseMenuScript.GameIsPaused)
+        // {
+        //     target = null;
+        // }
         if (Input.GetMouseButtonDown(0))
         {
+            // Debug.Log("Hello");
             Vector2 raycastposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(raycastposition, Vector2.zero);
             
@@ -33,15 +34,19 @@ public class clickToMove : MonoBehaviour
                 }
             }
         }
-        else if (Input.GetMouseButtonDown(0))
+        
+        if (Input.GetMouseButtonDown(0))
         {
+            // Debug.Log("Goodbye");
             moveToPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moveToPosition.z = transform.position.z;
+            // target.transform.GetComponent<Plane>().MovePlane(moveToPosition);
         }
         if (target != null)
         {
-            target.transform.GetComponent<Plane>().MovePlane(moveToPosition);
-            target = null;
+            target.transform.position = Vector3.MoveTowards(target.transform.position, moveToPosition, speed * Time.deltaTime);
+            // target.transform.GetComponent<Plane>().MovePlane(moveToPosition);
+            // target = null;
             //target.transform.position = Vector3.MoveTowards(target.transform.position, moveToPosition, speed * Time.deltaTime);
         }
     }

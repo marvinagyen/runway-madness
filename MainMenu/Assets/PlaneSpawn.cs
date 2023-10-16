@@ -17,7 +17,7 @@ public class PlaneSpawn : MonoBehaviour
     planeTimer -= Time.deltaTime;
     if (planeTimer <= 0f){
 
-        planeTimer = Random.Range(30,45);
+        planeTimer = Random.Range(5,45);
 
         color = Random.Range(0,3);
         random = Random.Range(0,3);

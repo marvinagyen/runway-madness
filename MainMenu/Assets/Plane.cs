@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Plane : MonoBehaviour
 {
-    public Transform startMarker;
-    public Transform endMarker;
+    public Vector3 startMarker = Vector3.zero;
+    public Vector3 endMarker = Vector3.zero;
     public float speed = 1.0f;
     private float startTime;
     private float journeyLength;
@@ -23,10 +23,11 @@ public class Plane : MonoBehaviour
 
     public void MovePlane(Vector3 destination)
     {
+        startMarker = transform.position;
         moving = true;
         startTime = Time.time;
-        endMarker.position = destination;
-        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+        endMarker = destination;
+        journeyLength = Vector3.Distance(startMarker, endMarker);
     }
 
 
@@ -39,9 +40,9 @@ public class Plane : MonoBehaviour
         {
             float distCovered = (Time.time - startTime) * speed;
             float fractionOfJourney = distCovered / journeyLength;
-            transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fractionOfJourney);
+            transform.position = Vector3.Lerp(startMarker, endMarker, fractionOfJourney);
 
-            if (transform.position == endMarker.position)
+            if (transform.position == endMarker)
             {
                 moving = false;
             }

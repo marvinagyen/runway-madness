@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
     guid: b986d151b17ea4aa387b586d7cf68bd9
+  - enabled: 1
+    path: Assets/Scenes/Saesha.unity
+    guid: e44b004b1cb91420181eb20d6e4e80db
   m_configObjects: {}

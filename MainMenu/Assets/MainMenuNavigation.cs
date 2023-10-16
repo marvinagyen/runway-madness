@@ -8,7 +8,7 @@ public class MainMenuNavigation : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(4);
     }
     
     public void GoToInstructions()
