@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -845, y: -316}
+  m_AnchoredPosition: {x: -845, y: -300}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &170841314
@@ -181,10 +181,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To win!
-
-    Get 5 flights to land and successfully take off. You lose
-    if you run out of open runways or if the planes collide!'
+  m_text: Try to get as many flights to land as possible as things keep getting more
+    and more hectic. Aim for a personal best score.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -296,7 +294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -845, y: 275}
+  m_AnchoredPosition: {x: -845, y: 280}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228036017
@@ -319,20 +317,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "How to play: \n1. At the beginning of the game, a plane, with a certain
-    problem, will request to land. The player has to indicate which runway the plane
-    should land at before the timer runs out.\n2. Once the plane has landed, the
-    player has to move the plane to the relevant location to  get it fixed prior
-    to moving the plane to a terminal to take off.\n3. Every 45 seconds a hazard
-    will take place which would shut down either a runway, terminal, garage or fuel
-    pump.\n4. Every minute, the player will receive a fix-it card which can be used
-    at any point to re-open an area which has been closed due to a hazard.\n5. The
-    types of issue your flight has will be indicated by their color:\na) Blue: Passengers
-    need to be changed (go straight to Terminal)\nb) Pink: Engine Failure (go to
-    garage then Terminal)\nc) Yellow: Low Fuel (go to gas pump then Terminal)\n6.
-    If your flight was pink or yellow and you resolved the issue, the plane will
-    change to green.\n7. Each hazard has an appropriate fix it card that resolves
-    that issue."
+  m_text: "How to play: \n1. Different colored planes will spawn at the top of the
+    screen.\n2. Red = Engine Failure, Blue = Must be Deboarded, Yellow = Refuel,
+    Green = No Problem\n3. To move the plane, click the plane and then guide it to
+    one of three destinations.\n4. Garage: Fixes Red, Gas Pump: Fixes Yellow, Terminal:
+    Send Blue and Green Here\n5. Planes can also be put on one of the numbered landing
+    pads as a holding space.\n6. If your flight was red or yellow and you resolved
+    the issue, the plane will change to green.\n7. Planes will get progressively
+    faster as you score more.\n8. To score, move a blue or green plane to one of
+    three terminals, signified by a letter.\n9. When planes collide or spawn on top
+    of each other, you lose."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -359,19 +353,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -694,9 +688,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Summary: Get the incoming flights from the runway to the terminals where
-    they are supposed to depart from, after taking care of their actions and mitigating
-    any hazards. Once they reach the terminal, they land and score a point. '
+  m_text: 'Summary: Air Traffic Control, guide the airplanes to their destinations
+    while averting disaster!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
